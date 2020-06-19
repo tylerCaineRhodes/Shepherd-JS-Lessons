@@ -1,0 +1,18 @@
+<--- fetching remote branch and setting to a new local branch to local --->
+git fetch <remote_name> <remote_branch>:<local_branch>
+
+<--- switch branch --->
+git checkout <local_branch>
+
+<--- clone a single branch ---> 
+git clone --single-branch --branch <branchname> <remote-repo>
+
+<--- create new branch --->
+git checkout -b <newbranchname>
+
+<--- example of cloning down the final challenge branch --->
+git fetch https://github.com/tylerCaineRhodes/ReactEmptyBoiler.git finalChallenge:finalChallenge 
+
+
+<--- example of cloning down a specific branch ---> 
+git clone --single-branch --branch finalChallenge https://github.com/tylerCaineRhodes/ReactEmptyBoiler.git

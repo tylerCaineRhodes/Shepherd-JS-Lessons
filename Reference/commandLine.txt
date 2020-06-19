@@ -1,0 +1,27 @@
+---list all users on computer---
+scl . list /Users | grep -v '^_'
+
+dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]'
+
+---check permissons on files ---
+ls -la
+
+---change permissions with chmod 777 command ----
+http://www.filepermissions.com/
+http://www.filepermissions.com/articles/understanding-octal-file-permissions
+
+---listing node processes---
+ps aux grep | node
+
+---check current user on computer---
+whoami
+echo $USER
+
+---switch user in terminal---
+su - <username>
+
+---list ports in use ---
+sudo lsof -i -n -P | grep TCP
+
+---list contents of a file ---
+cat <FILENAME>

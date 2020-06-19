@@ -1,0 +1,11 @@
+//display student's name and classes where the student's name is Rebekah
+
+select c.name, s.name from classes c inner join classes_students cs on (c.class_id = cs.class_id) 
+inner join students s on (cs.student_id = s.student_id) where s.name = 'Rebekah';
+
+
+//display all students' names and emails from cs 101
+
+ select s.name, s.email from students s inner join classes_students cs on (s.student_id = cs.student_id)
+  inner join classes c on (c.class_id = cs.class_id) where c.name = 'CS101';
+  
