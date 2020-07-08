@@ -2,26 +2,29 @@
 const reverse = (arr) => {
   result = [];
 
-  if(arr.length === 0){ //base case
+  if (arr.length === 0) { //base case
     return result;
   }
 
-  result.push(arr.pop())
-  return result.concat(reverse(arr))
+  result.push(arr.pop());
+  return result.concat(reverse(arr));
 }
 //---------------------------------------------------------------------------------------------------------
 const reverse = (arr) => {
   let result = [];
 
   const recurse = (arr) => {
-    if(arr.length === 0) return;
+    if (arr.length === 0) {
+      return;
+    }
 
-    result.push(arr.pop())
-    recurse(arr)
+    result.push(arr.pop());
+    recurse(arr);
   }
-  recurse(arr)
+  
+  recurse(arr);
 
-  return result
+  return result;
 }
 //---------------------------------------------------------------------------------------------------------
 const countVowels = (string) => {
