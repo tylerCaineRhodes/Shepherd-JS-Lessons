@@ -32,28 +32,40 @@ const countVowels = (string) => {
 
   if (string.length === 0){
     return count;
-  } 
-  if (string[0].toUpperCase() === 'A' || string[0].toUpperCase() === 'E' || string[0].toUpperCase() === 'I' || string[0].toUpperCase() === 'O' || string[0].toUpperCase() === 'U') {
+  }
+
+  const str = string.toLowerCase();
+
+  if (str[0] === 'a' || str[0] === 'e' || str[0] === 'i' || 
+      str[0] === 'o' || str[0]  === 'u') {
     count++;
   }
-  return count += countVowels(string.slice(1))
+  return count += countVowels(str.slice(1))
 }
 //---------------------------------------------------------------------------------------------------------
 const countVowels = (string) => {
   let count = 0;
 
-  const recurse = (str) => {
-    if (str.length === 0){
-      return;
-    } 
-    if(str[0].toUpperCase() === 'A' || str[0].toUpperCase() === 'E' || str[0].toUpperCase() === 'I'|| str[0].toUpperCase() === 'O'||str[0].toUpperCase() === 'U' ){
-      count+=1;
+  const recurse = (string) => {
+    if (string.length === 0) {
+      return count;
     }
-    recurse(str.slice(1))
+    
+    const str = string.toLowerCase();
+
+    if (str[0] === 'a' || str[0] === 'e' || str[0] === 'i' ||
+        str[0] === 'o' || str[0] === 'u') {
+      count++;
+    }
+
+    recurse(str.slice(1));
   }
-  recurse(string)
-  return count
+
+  recurse(string);
+
+  return count;
 }
+
 console.log(countVowels('abcdEfg'))
 //---------------------------------------------------------------------------------------------------------
 const findCombosOfRoy = (string) => {
