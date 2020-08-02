@@ -100,3 +100,21 @@ console.log(result4);
 
 var result5 = jenny.greet.call(bobby);
 console.log(result5);
+
+// -----------------------------------------
+// Problem 6
+
+// what should we see if we call getArea() on line 122?
+
+const circle = {
+  radius: 10,
+  color: 'orange',
+  getArea: function() {
+    return Math.PI * this.radius * this.radius;
+  },
+  getCircumference: function() {
+    return 2 * Math.PI * this.radius;
+  }
+};
+
+let {radius, getArea, getCircumference} = circle;
